@@ -27,7 +27,7 @@ const Navbar = () => {
           <Link 
             onClick={() => setMenu("menu")} 
             className={isActive("menu")}
-            to='/menu'
+            to='/'
           >
             Menu
           </Link>
