@@ -1,8 +1,12 @@
 import React from 'react';
 import { menu_list } from '../assets/assets';
 
+
+
 const ExploreMenu = ({ category, setCategory }) => {
+
   return (
+    
     <div className='flex flex-col gap-[20px]'>
       <h1 className='text-[#262626] font-bold'>Explore our menu</h1>
       <p className='max-w-[60%] text-[#808080]'>
@@ -38,7 +42,9 @@ const ExploreMenu = ({ category, setCategory }) => {
       </div>
 
       <hr className='my-[10px] h-[2px] bg-[#e2e2e2] border-none' />
+     
     </div>
+    
   );
 };
 

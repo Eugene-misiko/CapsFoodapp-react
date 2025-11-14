@@ -1,6 +1,7 @@
 
 import React from 'react';
 import header_img from '../assets/header_img.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -23,11 +24,11 @@ const Header = () => {
           with the finest ingredients to satisfy your dining experience — one
            delicious meal at a time.
         </p>
-        <button className="bg-[#747474] hover:bg-gray-600 
+        <Link to='/menu' className="bg-[#747474] hover:bg-gray-600 
         text-white font-semibold px-6 py-2 rounded-[50px] 
         cursor-pointer">
           View Menu
-        </button>
+        </Link>
       </div>
     </div>
   );
