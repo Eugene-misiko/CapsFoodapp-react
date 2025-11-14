@@ -15,7 +15,7 @@ const Login = ({setShowLogin}) => {
             <img className='w-[16px] cursor-pointer' onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
         </div>
         <div className='flex flex-col gap-[20px]'>
-            {currState==="Login"?<></>:<input type="text" placeholder='Your name' required/>}
+            {currState==="Login"?<></>:<input type="text" className='outline-none border border-gray-300 rounded-[4px] p-[10px]' placeholder='Your name' required/>}
             <input className='outline-none border border-gray-300 rounded-[4px] p-[10px]' type="email" placeholder='Your email' required/>
             <input className='outline-none border border-gray-300 rounded-[4px] p-[10px]' type="password" placeholder='Password' required />
         </div>
