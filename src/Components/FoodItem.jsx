@@ -19,8 +19,11 @@ const FoodItem = ({id,name,price,description,image}) => {
             <p className='text-[20px] font-medium'>{name}</p>
             <img className='w-[70px]' src={assets.rating_starts} alt="" />
             {!cartItems[id] 
-               ? <img className='w-[35px] absolute mb-[130px] ml-[125px] cursor-pointer rounded-[50%]' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt="" />
-               : <div className=' absolute mb-[130px] ml-[125px] flex items-center gap-[10px] p-[6px] rounded-[50px] bg-white '>
+               ? <img className='w-[35px] absolute mb-[130px] ml-[125px] cursor-pointer 
+               rounded-[50%]'
+                onClick={()=>addToCart(id)} src={assets.add_icon_white} alt="" />
+               : <div className=' absolute mb-[130px] ml-[125px] flex items-center gap-[10px] 
+               p-[6px] rounded-[50px] bg-white '>
                     <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="" />
                     <p>{cartItems[id]}</p>
                     <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt="" />

@@ -9,20 +9,31 @@ const PlaceOder = () => {
         <div className="w-full w-max[(30%,500px)]">
           <p className="text-[30px] font-medium mb-[50px] ">Delivery Information</p>
           <div className="flex gap-[10px]">
-            <input className='w-[100%] mb-[15px] p-[10px] border border-[#c5c5c5] rounded-[4px] outline-red-500' type="text"  placeholder='Fisrt Name'/>
-            <input className='w-[100%] mb-[15px] p-[10px] border border-[#c5c5c5] rounded-[4px] outline-red-500' type="text"  placeholder='Last Name'/>
+            <input className='w-[100%] mb-[15px] p-[10px]
+             border border-[#c5c5c5] rounded-[4px] outline-red-500' 
+             type="text"  placeholder='Fisrt Name'/>
+            <input className='w-[100%] mb-[15px] p-[10px] 
+            border border-[#c5c5c5] rounded-[4px] outline-red-500' 
+            type="text"  placeholder='Last Name'/>
           </div>
-          <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500'  type="email" placeholder='Email Adress'/>
-          <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500' type="text" placeholder='Street'/>
-           <div className="">
-            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500' type="text"  placeholder='City'/>
-            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500' type="text"  placeholder='State'/>
+          <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+          rounded-[4px] outline-red-500'  type="email" placeholder='Email Adress'/>
+          <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+          rounded-[4px] outline-red-500' type="text" placeholder='Street'/>
+           <div className="flex gap-[10px]">
+            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+            rounded-[4px] outline-red-500' type="text"  placeholder='City'/>
+            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+            rounded-[4px] outline-red-500' type="text"  placeholder='State'/>
           </div>
-           <div className="">
-            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500' type="text"  placeholder='Zip code'/>
-            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] rounded-[4px] outline-red-500' type="text"  placeholder='Country'/>
+           <div className="flex gap-[10px]">
+            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+            rounded-[4px] outline-red-500' type="text"  placeholder='Zip code'/>
+            <input className='w-[100%] mb-[15px] border border-[#c5c5c5] p-[10px] 
+            rounded-[4px] outline-red-500' type="text"  placeholder='Country'/>
           </div>
-          <input className='w-[100%] border border-[#c5c5c5] mb-[15px] p-[10px] rounded-[4px] outline-red-500' type="text" placeholder='Phone'/>
+          <input className='w-[100%] border border-[#c5c5c5] mb-[15px] p-[10px] 
+          rounded-[4px] outline-red-500' type="text" placeholder='Phone'/>
         </div>
         <div className="w-max[(40%,500px)]">
              <div className='flex-1 flex flex-col'>

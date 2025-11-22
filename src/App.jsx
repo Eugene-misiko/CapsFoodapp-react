@@ -8,6 +8,8 @@ import ExploreMenu from "./Components/ExploreMenu"
 import AppDownload from "./Components/AppDownload"
 import { useState } from "react"
 import Login from "./Components/Login"
+import NavAdmin from "../AdminComponents/NavAdmin"
+import Sidebar from "../AdminComponents/Sidebar"
 
 
 
@@ -17,8 +19,17 @@ function App() {
   return (
     <>
     {showLogin?<Login setShowLogin={setShowLogin}/>:<></>}
+      <div>
+        <NavAdmin/>
+        <hr />
+        <div className="flex">
+          <Sidebar/>
+        </div>
+      </div>
+    
     <div className="w-[80%] m-auto">
-       <Navbar setShowLogin={setShowLogin} />
+      
+       {/* <Navbar setShowLogin={setShowLogin} />
        <Routes>
         <Route path="/menu" element={<ExploreMenu/>}/>
         <Route path="/contuct-us" element={<AppDownload/>}/>
@@ -27,7 +38,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/order" element={<PlaceOder/>}/>
        </Routes>
-     
+      */}
      </div>
      <Footer />
     </>

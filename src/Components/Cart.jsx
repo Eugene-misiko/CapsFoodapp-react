@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom'
 const Cart = () => {
 
   const{cartItems,food_list,removeFromCart,getTotalCartAmount} = useContext(StoreContext)
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className='mt-[100px]'>
       <div className="">
-        <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] items-center text-gray-500 text-[max(1vw,12px)]">
+        <div className="grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr] 
+        items-center text-gray-500 text-[max(1vw,12px)]">
+         
+         
           <p>Items</p>
           <p>Title</p>
           <p>Price</p>
@@ -23,8 +26,9 @@ const Cart = () => {
             if(cartItems[item._id]>0){
               return(
                 <div>
-                  <div className='mt-[10px] m-[0px] text-black'>
-                   <img className='w-[50px]' src={item.image} alt="" />
+                  <div className='mt-[10px] m-[0px] text-black grid grid-cols-[1fr_1.5fr_1fr_1fr_1fr_0.5fr]'>
+                   <img className='w-[60px] h-[60px] rounded-[50%] border border-red-500' src={item.image} alt="" />
+                   {/* <p>{item.description}</p> */}
                    <p>{item.name}</p>
                    <p>${item.price}</p>
                    <p>{cartItems[item._id]}</p>
@@ -43,19 +47,19 @@ const Cart = () => {
         <div className='flex-1 flex flex-col'>
           <h2>Cart Totals</h2>
           <div>
-            <div className="flex justify-space-between text-[#555]">
+            <div className="flex justify-space-between text-[#555] gap-105">
               <p>Subtotal</p>
               <p>${getTotalCartAmount()}</p>
             </div>
             <hr className='mt-[10px] m-[0px]'/>
-            <div className="">
+            <div className="flex flex-row gap-100 ">
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>
+              <p>${2}</p>
             </div>
             <hr className='mt-[10px] m-[0px]'/>
             <div className="">
-              <b>Total</b>
-              <b>{getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+              <b>Total</b>:
+              <b>${getTotalCartAmount()+2}</b>
             </div>
           </div>
           <button onClick={()=>navigate('/order')} className='border-none text-white bg-red-500
@@ -65,9 +69,12 @@ const Cart = () => {
         <div className="flex-1">
           <div>
             <p className='text-[#555]'>If you have a promo code, Enter it here</p>
-            <div className='mt-[10px] flex justify-space-between items-center bg-[#555] rounded-[4px]'>
-              <input className='bg-transparent border-none outline-none pl-[10px]' type="text" placeholder='promo code'/>
-              <button className='w-max[(10vw,150px)] p-[12px] bg-black border-none text-white rounded-[4px]'>Submit</button>
+            <div className='mt-[10px] flex 
+            justify-space-between items-centerrounded-[4px] gap-3'>
+              <input className=' border-none 
+               bg-[#555]  outline-none pl-[10px] rounded' type="text" placeholder='promo code'/>
+              <button className='w-max[(10vw,150px)] p-[12px]
+               bg-black border-none text-white rounded-[4px] cursor-pointer'>Submit</button>
             </div>
           </div>
         </div>
