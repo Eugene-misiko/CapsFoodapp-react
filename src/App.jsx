@@ -8,8 +8,9 @@ import ExploreMenu from "./Components/ExploreMenu"
 import AppDownload from "./Components/AppDownload"
 import { useState } from "react"
 import Login from "./Components/Login"
+import Holdcont from "../AdminComponents/Holdcont"
 import NavAdmin from "../AdminComponents/NavAdmin"
-import Sidebar from "../AdminComponents/Sidebar"
+
 
 
 
@@ -18,28 +19,31 @@ function App() {
 
   return (
     <>
+   
+          <div>
+          <Holdcont />
+         
+   
     {showLogin?<Login setShowLogin={setShowLogin}/>:<></>}
-      <div>
-        <NavAdmin/>
-        <hr />
-        <div className="flex">
-          <Sidebar/>
-        </div>
-      </div>
     
-    <div className="w-[80%] m-auto">
+    {/* <div className=" w-[80%] m-auto"> */}
       
-       {/* <Navbar setShowLogin={setShowLogin} />
-       <Routes>
-        <Route path="/menu" element={<ExploreMenu/>}/>
+       {/* <Navbar setShowLogin={setShowLogin} /> */}
+      
+       <Routes>  
+        
+       
+         
+        
+        {/* <Route path="/menu" element={<ExploreMenu/>}/> 
         <Route path="/contuct-us" element={<AppDownload/>}/>
         <Route path="/mobile-app" element={<AppDownload/>}/>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
-        <Route path="/order" element={<PlaceOder/>}/>
+        <Route path="/order" element={<PlaceOder/>}/> */}
        </Routes>
-      */}
-     </div>
+      </div>
+     {/* </div> */}
      <Footer />
     </>
   )
